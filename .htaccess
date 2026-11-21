@@ -1,0 +1,6 @@
+Options -Indexes
+<FilesMatch "^(\.env|composer\.(json|lock)|schema\.sql|README\.md)$">
+    Require all denied
+</FilesMatch>
+RewriteEngine On
+RewriteRule ^(app|bin|database|docs|storage|vendor)(/|$) - [F,END]
