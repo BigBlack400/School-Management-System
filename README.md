@@ -46,7 +46,14 @@ database/schema.sql  MySQL/MariaDB schema and non-credential sample seed data
 docs/policies/       Acceptable use, privacy/retention, backup/disaster recovery
 public/              Web document root and front controller
 storage/              Non-public application storage (configure server permissions)
+docs/                Static GitHub Pages marketing preview
 ```
+
+## GitHub Pages preview
+
+GitHub Pages can publish the static design preview in [`docs/index.html`](docs/index.html). GitHub Pages does not execute PHP and does not provide MariaDB/MySQL, so it cannot host login, sessions, database operations, or server-side application routes. Use a PHP-capable host (for example XAMPP during local development, or a managed PHP/MySQL server for production) for the full system.
+
+The included GitHub Actions workflow deploys the `docs/` preview to Pages. Repository Settings → Pages must use **GitHub Actions** as the build and deployment source after the first workflow run.
 
 ## Implemented workflows
 
